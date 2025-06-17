@@ -1,0 +1,32 @@
+{
+  "name": "GitHub Zip Uploader Bot",
+  "description": "A Telegram bot that uploads ZIP files to GitHub after extracting them.",
+  "repository": "https://github.com/yourusername/your-repo",
+  "keywords": ["telegram", "pyrogram", "github", "bot", "zip"],
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API hash from https://my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token from @BotFather",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
