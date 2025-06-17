@@ -114,7 +114,7 @@ async def upload_to_github(chat_id, message: Message):
                 if sha:
                     payload["sha"] = sha
 
-                import base64
+               
                 payload["content"] = base64.b64encode(content).decode()
 
                 # Upload
