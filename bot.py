@@ -108,9 +108,9 @@ async def upload_to_github(chat_id, message: Message):
 
                 payload = {
                     "message": f"Upload {github_path}",
-                    "content": content.encode("base64") if isinstance(content, str) else content.encode("base64"),
+                    "content": base64.b64encode(content).decode(),
                     "branch": "main"
-                }
+                  }
                 if sha:
                     payload["sha"] = sha
 
