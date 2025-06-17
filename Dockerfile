@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "github_uploader_bot.py"]
+CMD ["python", "bot.py"]
